@@ -33,7 +33,7 @@ class TestBooksCollector:
 
         collector5.add_new_book('Book5')
         collector5.set_book_genre('Book5', 'Фантастика')
-        assert collector5.get_books_with_specific_genre('Book5') == 'Фантастика'
+        assert collector5.get_books_with_specific_genre('Фантастика') == ['Book5']
 
     def test_get_books_genre(self):
         collector6 = BooksCollector()
